@@ -3,13 +3,14 @@ const skyphos = 7203
 const kiaf = 840
 const drop = 4
 function calculation() {
-    const day = document.getElementById("day").value
-    const hour = document.getElementById("hour").value
-    const min = document.getElementById("min").value
-    const sec = document.getElementById("sec").value
-    // console.log(hour)
-    // console.log(min)
-    // console.log(sec)
+    const day = parseInt(document.getElementById("day").value) || 0
+    const hour = parseInt(document.getElementById("hour").value) || 0
+    const min = parseInt(document.getElementById("min").value) || 0
+    const sec = parseInt(document.getElementById("sec").value) || 0
+    console.log(day)
+    console.log(hour)
+    console.log(min)
+    console.log(sec)
 
     //конвртация в секунды
     const dayToSec = day * 24 * 60 * 60
@@ -18,10 +19,9 @@ function calculation() {
     // console.log(hourToSec)
     const minToSec = min * 60
     // console.log(minToSec)
-    const secToInt = sec * 1
 
     // сума секунд
-    let summ = hourToSec + minToSec + secToInt + dayToSec
+    let summ = hourToSec + minToSec + sec + dayToSec
     console.log(summ)
 
     //конвертация
@@ -32,38 +32,22 @@ function calculation() {
 
 
 function conversion(summ) {
-    //Карас
-    let karasNum = summ / karas
-    // console.log(karasNum)
-    karasNum = Math.floor(karasNum)
-    document.getElementById('karas').value = karasNum
-    // console.log(karasNum)
-    let rimmed = karasNum * karas
-    summ = summ - rimmed
-    // console.log(summ + " si")
-
-    //Скифос
-    let skyphosNum = summ / skyphos
-    // console.log(skyphosNum)
-    skyphosNum = Math.floor(skyphosNum)
-    document.getElementById('skyphos').value = skyphosNum
-    let rimmed2 = skyphosNum * skyphos
-    summ = summ - rimmed2
-    // console.log(summ)
-
-    //Киаф
-    let kiafNum = summ / kiaf
-    // console.log(kiafNum)
-    kiafNum = Math.floor(kiafNum)
-    // console.log(kiafNum)
-    document.getElementById('kiaf').value = kiafNum
-    let rimmed3 = kiafNum * kiaf
-    console.log(rimmed3)
-    summ = summ - rimmed3
-    console.log(summ)
+    summ = calculateTime(summ, karas, 'karas')
+    summ = calculateTime(summ, skyphos, 'skyphos')
+    summ = calculateTime(summ, kiaf, 'kiaf')
 
     //капля
     let dropNum = summ / drop
     // console.log(dropNum)
     document.getElementById('drop').value = dropNum
+}
+
+function calculateTime(summ, mesUnit, elementId) {
+    let value = Math.floor(summ / mesUnit)
+    console.log(value)
+    document.getElementById(elementId).value = value
+    let rimmed = value * mesUnit
+    summ = summ - rimmed
+    console.log(summ + " si")
+    return summ;
 }
