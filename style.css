@@ -1,0 +1,14 @@
+.contaainer{
+    margin: 20px;
+}
+
+input{
+    width: 4%;
+    height: 12px;
+}
+button{
+    height: 32px;
+    text-align: center;
+    padding: 0 10px;
+    padding-top: 0;
+}
