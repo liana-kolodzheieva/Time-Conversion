@@ -1,14 +1,24 @@
-.contaainer{
-    margin: 20px;
+* {
+  box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-input{
-    width: 4%;
-    height: 16px;
+.contaainer {
+  margin: 20px;
+  display: flex;
 }
-button{
-    height: 32px;
-    text-align: center;
-    padding: 0 10px;
-    padding-top: 0;
+
+input {
+  width: 4%;
+  height: 16px;
+}
+button {
+  height: 32px;
+  text-align: center;
+  padding: 0 10px;
+  padding-top: 0;
+}
+
+.change {
+  display: block;
 }

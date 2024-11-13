@@ -1,36 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <script src="javaScript.js"></script>
     <div class="contaainer">
+      <div>
         <div>
-            <h1>Введите время для конвертации</h1>
-            <input type="number" id="day"> д.
-            <input type="number" id="hour"> ч.
-            <input type="number" id="min"> мин.
-            <input type="number" id="sec"> сек.
-            <br>
-            <br>
-            <button onclick="calculation()">Конвертировать</button>
+          <h1>Введите время для конвертации</h1>
+          <input type="number" id="day" value="0" />
+          <span id="dayText">д.</span>
+          <input type="number" id="hour" value="0" />
+          <span id="hourText">ч.</span>
+          <input type="number" id="min" value="0" />
+          <span id="minText">мин.</span>
+          <input type="number" id="sec" value="0" />
+          <span id="secText">сек.</span>
+          <br />
+          <br />
+          <button onclick="calculation()">Конвертировать</button>
+          <button onclick=""><b>⇅</b></button>
         </div>
         <div>
-            <h1>Конвертированный результат</h1>
-            <input type="text" id="karas" readonly> карас(а)
-            <input type="text" id="skyphos" readonly> скифос(а)
-            <input type="text" id="kiaf" readonly> киаф(а)
-            <input type="text" id="drop" readonly> капля(и)
+          <h1>Конвертированный результат</h1>
+          <input type="text" id="karas" readonly />
+          <span id="karasText">карас(а)</span>
+          <input type="text" id="skyphos" readonly />
+          <span id="skyphosText">скифос(а)</span>
+          <input type="text" id="kiaf" readonly />
+          <span id="kiafText">киаф(а)</span>
+          <input type="text" id="drop" readonly />
+          <span id="dropText">капля(и)</span>
         </div>
-
+      </div>
     </div>
-</body>
-
+  </body>
 </html>
