@@ -1,11 +1,11 @@
 * {
   box-sizing: border-box;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
 .contaainer {
   margin: 20px;
-  display: flex;
+  /* display: flex; */
 }
 
 input {
@@ -17,8 +17,11 @@ button {
   text-align: center;
   padding: 0 10px;
   padding-top: 0;
+  margin: 5px;
 }
 
-.change {
-  display: block;
+#row{
+display: flex;
+/* margin: 5px; */
 }
+
