@@ -71,31 +71,37 @@ function raplasingTimes() {
   const drop = document.getElementById("drop").value;
 
   //перезапизаписывание данных
-  document.getElementById("dayText").innerHTML = "карас(а)"
-  document.getElementById("hourText").innerHTML = "скифос(а)"
-  document.getElementById("minText").innerHTML = "киаф(а)"
-  document.getElementById("secText").innerHTML = "капля(и)"
+  document.getElementById("dayText").innerHTML = "карас(а)";
+  document.getElementById("hourText").innerHTML = "скифос(а)";
+  document.getElementById("minText").innerHTML = "киаф(а)";
+  document.getElementById("secText").innerHTML = "капля(и)";
 
-  document.getElementById("day").value = karas
-  document.getElementById("hour").value = skypchos
-  document.getElementById("min").value = kiaf
-  document.getElementById("sec").value = drop
+  document.getElementById("day").value = karas;
+  document.getElementById("hour").value = skypchos;
+  document.getElementById("min").value = kiaf;
+  document.getElementById("sec").value = drop;
 
-  document.getElementById("karasText").innerHTML = "д."
-  document.getElementById("skyphosText").innerHTML = "ч."
-  document.getElementById("kiafText").innerHTML = "мин."
-  document.getElementById("dropText").innerHTML = "сек."
+  document.getElementById("karasText").innerHTML = "д.";
+  document.getElementById("skyphosText").innerHTML = "ч.";
+  document.getElementById("kiafText").innerHTML = "мин.";
+  document.getElementById("dropText").innerHTML = "сек.";
 
-  document.getElementById("karas").value = day
-  document.getElementById("skyphos").value = hour
-  document.getElementById("kiaf").value = min
-  document.getElementById("drop").value = sec
+  document.getElementById("karas").value = day;
+  document.getElementById("skyphos").value = hour;
+  document.getElementById("kiaf").value = min;
+  document.getElementById("drop").value = sec;
 
-  document.getElementById("inline").innerHTML = `<button id="swap" onclick="raplasingTimesBack()"><b>⇅</b></button>`;
+  document.getElementById(
+    "inline"
+  ).innerHTML = `<button id="swap" onclick="raplasingTimesBack()"><b>⇅</b></button>`;
+  document.getElementById(
+    "butt"
+  ).innerHTML = `<button onclick="CullToOurTime()">Конвертировать</button>`;
 }
 
-
-
+function CullToOurTime() {
+  const karas = document.getElementById("day").value;
+}
 function raplasingTimesBack() {
   //наще время
   const karas = document.getElementById("day").value;
@@ -110,40 +116,38 @@ function raplasingTimesBack() {
 
   //
 
-  document.getElementById("karasText").innerHTML = "карас(а)"
-  document.getElementById("skyphosText").innerHTML = "скифос(а)"
-  document.getElementById("kiafText").innerHTML = "киаф(а)"
-  document.getElementById("dropText").innerHTML = "капля(и)"
+  document.getElementById("karasText").innerHTML = "карас(а)";
+  document.getElementById("skyphosText").innerHTML = "скифос(а)";
+  document.getElementById("kiafText").innerHTML = "киаф(а)";
+  document.getElementById("dropText").innerHTML = "капля(и)";
 
-  document.getElementById("karas").value = karas
-  document.getElementById("skyphos").value = skypchos
-  document.getElementById("kiaf").value = kiaf
-  document.getElementById("drop").value = drop
+  document.getElementById("karas").value = karas;
+  document.getElementById("skyphos").value = skypchos;
+  document.getElementById("kiaf").value = kiaf;
+  document.getElementById("drop").value = drop;
 
-  document.getElementById("dayText").innerHTML = "д."
-  document.getElementById("hourText").innerHTML = "ч."
-  document.getElementById("minText").innerHTML = "мин."
-  document.getElementById("secText").innerHTML = "сек."
+  document.getElementById("dayText").innerHTML = "д.";
+  document.getElementById("hourText").innerHTML = "ч.";
+  document.getElementById("minText").innerHTML = "мин.";
+  document.getElementById("secText").innerHTML = "сек.";
 
-  document.getElementById("day").value = day
-  document.getElementById("hour").value = hour
-  document.getElementById("min").value = min
-  document.getElementById("sec").value = sec
+  document.getElementById("day").value = day;
+  document.getElementById("hour").value = hour;
+  document.getElementById("min").value = min;
+  document.getElementById("sec").value = sec;
 
-  document.getElementById("inline").innerHTML = `<button id="swap" onclick="raplasingTimes()"><b>⇅</b></button>`;
+  document.getElementById(
+    "inline"
+  ).innerHTML = `<button id="swap" onclick="raplasingTimes()"><b>⇅</b></button>`;
 }
 
-
-
-
-
 function cleaningForm() {
-  document.getElementById("day").value = " "
-  document.getElementById("hour").value = " "
-  document.getElementById("min").value = " "
-  document.getElementById("sec").value = " "
-  document.getElementById("karas").value = " "
-  document.getElementById("skyphos").value = " "
-  document.getElementById("kiaf").value = " "
-  document.getElementById("drop").value = " "
+  document.getElementById("day").value = " ";
+  document.getElementById("hour").value = " ";
+  document.getElementById("min").value = " ";
+  document.getElementById("sec").value = " ";
+  document.getElementById("karas").value = " ";
+  document.getElementById("skyphos").value = " ";
+  document.getElementById("kiaf").value = " ";
+  document.getElementById("drop").value = " ";
 }
