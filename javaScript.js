@@ -1,7 +1,13 @@
 const karas = 97200;
-const skyphos = 7203;
+const skyphos = 7380;
 const kiaf = 840;
 const drop = 4;
+
+const day = 86400;
+const hour = 3600;
+const min = 60;
+const sec = 1;
+
 function calculation() {
   const day = parseInt(document.getElementById("day").value) || 0;
   const hour = parseInt(document.getElementById("hour").value) || 0;
@@ -54,7 +60,7 @@ function calculateTime(summ, mesUnit, elementId) {
   document.getElementById(elementId).value = value;
   let rimmed = value * mesUnit;
   summ = summ - rimmed;
-  console.log(summ + " si");
+  // console.log(summ + " si");
   return summ;
 }
 
@@ -101,7 +107,30 @@ function raplasingTimes() {
 
 function CullToOurTime() {
   const karas = document.getElementById("day").value;
+  const skyphos = document.getElementById("hour").value;
+  const kiaf = document.getElementById("min").value;
+  const drop = document.getElementById("sec").value;
+
+  const karasToSec = karas * 97200;
+  const skypchosToSec = skyphos * 7380;
+  const kiafToSec = kiaf * 840;
+  const dropToSec = drop * 4;
+
+  let summ = karasToSec + skypchosToSec + kiafToSec + dropToSec;
+  console.log(summ);
+
+  convToOurTime(summ);
 }
+
+function convToOurTime(summ) {
+  summ = calculateTime(summ, day, "karas");
+  summ = calculateTime(summ, hour, "skyphos");
+  summ = calculateTime(summ, min, "kiaf");
+
+  let SecNum = summ / sec;
+  document.getElementById("drop").value = SecNum;
+}
+
 function raplasingTimesBack() {
   //наще время
   const karas = document.getElementById("day").value;
@@ -142,12 +171,12 @@ function raplasingTimesBack() {
 }
 
 function cleaningForm() {
-  document.getElementById("day").value = " ";
-  document.getElementById("hour").value = " ";
-  document.getElementById("min").value = " ";
-  document.getElementById("sec").value = " ";
-  document.getElementById("karas").value = " ";
-  document.getElementById("skyphos").value = " ";
-  document.getElementById("kiaf").value = " ";
-  document.getElementById("drop").value = " ";
+  document.getElementById("day").value = null;
+  document.getElementById("hour").value = null;
+  document.getElementById("min").value = null;
+  document.getElementById("sec").value = null;
+  document.getElementById("karas").value = null;
+  document.getElementById("skyphos").value = null;
+  document.getElementById("kiaf").value = null;
+  document.getElementById("drop").value = null;
 }
